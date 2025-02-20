@@ -1,0 +1,18 @@
+.placeHolder {
+    margin-top: 8.5vh;
+}
+
+.startPageText {
+    font-size: 2em;
+    font-weight: 900;
+    font-weight: bold;
+    background: linear-gradient(180deg, #fff , #a05cc7);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
