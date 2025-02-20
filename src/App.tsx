@@ -1,7 +1,11 @@
+import Calculator from './components/Calculator/Calculator.tsx';
 
 function App() {
  
-  return(<><h1>Yannik het en chline pimmel</h1></>);
+  return(<>
+  <Calculator></Calculator>
+
+  </>);
 
 }
 
