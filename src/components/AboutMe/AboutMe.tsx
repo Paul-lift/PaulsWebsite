@@ -29,7 +29,7 @@ function AboutMe() {
   const textRef: any = useRef(null);
 
   useEffect(() => {
-    const letters = textRef.current!.querySelectorAll("span");
+    const letters = textRef.current!.querySelectorAll(".letter");
 
     letters.forEach((letter: any) => {
       gsap.set(letter, { display: "inline-block" });
@@ -64,30 +64,32 @@ function AboutMe() {
   }, []);
 
   return (
-    <div className={styles.aboutMe} ref={aboutMeRef}>
-      <h1 className={styles.gradientText}>Über Mich</h1>
-      <p className={styles.secondaryText} ref={textRef}>
-        {"Mein Name ist Paul, ich bin 16 Jahre alt und bin Informatiker im ersten Lehrjahr bei der Swisscom. Zuhause bin ich in Birmenstorf im Kanton Aargau und besuche die Berufsbildungsschule Winterthur BBW. Ich bin eine hilfsbereite und freundliche Person und bin immer offen für neue Lernmöglichkeiten und Herausforderungen."
-          .split("")
-          .map((char, index) => (
-            <span
-              key={index}
-              style={{ marginRight: char === " " ? "10px" : "0px" }}
-            >
-              {char}
-            </span>
-          ))}
-      </p>
-      <svg width="300%" height="400" viewBox="0 0 800 400">
-      <path
-        id="motionPath"
-        d="M -85.577 198.915 C -49.193 189.818 -4.892 186.111 32.144 193.279 C 73.153 201.216 103.586 224.611 141.098 239.616 C 174.421 252.945 214.47 262.68 250.052 265.915 C 333.74 273.523 405.513 257.063 486.746 237.111 C 541.508 223.661 597.826 211.705 650.177 190.148 C 676.213 179.427 699.01 162.535 724.066 151.325"
-        fill="none"
-        stroke="white"
-        strokeWidth="2"
-      />
-    </svg>
-    </div>
+    <>
+      <div className={styles.aboutMe} ref={aboutMeRef}>
+        <h1 className={styles.gradientText}>Über Mich</h1>
+        <p className={styles.secondaryText} ref={textRef}>
+          {"Ich habe mich bereits als kleines Kind gewundert, wie verschiedene Applikationen und technische Geräte funktionieren. Später habe ich zu Hause ab und zu versucht zu programmieren, was mir ebenfalls Spass gemacht hat. Beim Schnuppern hat sich dann herausgestellt, dass ich Informatiker werden will. Meine Ziele sind es, ein sehr gutes Verständnis für das Programmieren aufzubauen, möglichst viele Programmiersprachen zu beherrschen und die Swisscom in eine digitale Zukunft zu führen."
+            .split(" ")
+            .map((word, wordIndex) => (
+              <span
+                key={wordIndex}
+                className="word" // <- Äußerer Wrapper für jedes Wort
+                style={{ display: "inline-block", marginRight: "10px" }}
+              >
+                {word.split("").map((char, charIndex) => (
+                  <span
+                    key={charIndex}
+                    className="letter" // <- Innerer Wrapper für jedes Zeichen
+                    style={{ display: "inline-block" }}
+                  >
+                    {char}
+                  </span>
+                ))}
+              </span>
+            ))}
+        </p>
+      </div>
+    </>
   );
 }
 
