@@ -1,0 +1,26 @@
+.aboutMe{
+    height: 100vh;
+    display: flex;
+    margin-left: 10vw   ;
+    margin-right: 10vw  ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.mainText {
+    color: #f8f8ff;
+}
+
+.secondaryText {
+    color: #E0E0E0;
+}
+
+.gradientText{
+    font-weight: bold;
+    background: linear-gradient(180deg, #fff, #414141);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
