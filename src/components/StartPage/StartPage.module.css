@@ -6,13 +6,23 @@
     font-size: 2em;
     font-weight: 900;
     font-weight: bold;
-    background: linear-gradient(180deg, #fff , #a05cc7);
+    background: linear-gradient(180deg, #fff, #a05cc7);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 77vh;
 }
 
+.startPageText span {
+    background: linear-gradient(270deg, #6ea8cd, #6ea8cd);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 6px rgba(135, 130, 202, 0.6), 0 0 25px rgba(135, 130, 202, 0.3);
+    font-weight: bold;
+
+
+}
