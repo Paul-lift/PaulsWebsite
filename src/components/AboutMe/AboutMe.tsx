@@ -2,6 +2,8 @@ import styles from "./AboutMe.module.css";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import portraitImage from "../../assets/Portrait_Paul_Bot.png";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,6 +70,7 @@ function AboutMe() {
     <>
       <div className={styles.aboutMe} ref={aboutMeRef}>
         <h1 className={styles.gradientText}>Über Mich</h1>
+        <img src={portraitImage}  alt="" />
         <p className={styles.secondaryText} ref={textRef}>
           {"Ich habe mich bereits als kleines Kind gewundert, wie verschiedene Applikationen und technische Geräte funktionieren. Später habe ich zu Hause ab und zu versucht zu programmieren, was mir ebenfalls Spass gemacht hat. Beim Schnuppern hat sich dann herausgestellt, dass ich Informatiker werden will. Meine Ziele sind es, ein sehr gutes Verständnis für das Programmieren aufzubauen, möglichst viele Programmiersprachen zu beherrschen und die Swisscom in eine digitale Zukunft zu führen."
             .split(" ")

@@ -25,14 +25,14 @@ function SvgOne() {
         alignOrigin: [0.5, 0.5],
         autoRotate: false,
       },
-      duration: 3, // Dauer der Animation
+      duration: 5, // Dauer der Animation
       ease: "power1.inOut",
       paused: true, // Startet erst bei ScrollTrigger
     });
 
     ScrollTrigger.create({
       trigger: pathRef.current,
-      start: "top 70%", // Startet, wenn der Pfad zu 70% im Viewport ist
+      start: "top 50%", // Startet, wenn der Pfad zu 70% im Viewport ist
       onEnter: () => animation.play(),
       once: true, // Nur einmal abspielen
     });
