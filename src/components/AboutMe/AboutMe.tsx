@@ -29,6 +29,7 @@ function AboutMe() {
   const textRef: any = useRef(null);
 
   useEffect(() => {
+    const words = textRef.current!.querySelectorAll(".word");
     const letters = textRef.current!.querySelectorAll(".letter");
 
     letters.forEach((letter: any) => {
