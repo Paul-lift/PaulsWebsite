@@ -4,7 +4,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import portraitImage from "../../assets/Portrait_Paul_Bot.png";
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 function AboutMe() {
@@ -34,12 +33,13 @@ function AboutMe() {
     const words = textRef.current!.querySelectorAll(".word");
     const letters = textRef.current!.querySelectorAll(".letter");
 
-    letters.forEach((letter: any) => {
+    words.forEach((letter: any) => {
       gsap.set(letter, { display: "inline-block" });
 
       letter.addEventListener("mouseenter", () => {
         gsap.to(letter, {
-          y: -7,
+          y: -2,
+          x: 0,
           color: "#a05cc7",
           textShadow: "0px 0px 10px #a05cc7",
           duration: 0.3,
@@ -49,6 +49,7 @@ function AboutMe() {
         letter.addEventListener("mouseleave", () => {
           gsap.to(letter, {
             y: 0,
+            x: 0,
             color: "#f8f8ff",
             textShadow: "none",
             duration: 0.3,
@@ -69,29 +70,36 @@ function AboutMe() {
   return (
     <>
       <div className={styles.aboutMe} ref={aboutMeRef}>
-        <h1 className={styles.gradientText}>Über Mich</h1>
-        <img src={portraitImage}  alt="" />
-        <p className={styles.secondaryText} ref={textRef}>
-          {"Ich habe mich bereits als kleines Kind gewundert, wie verschiedene Applikationen und technische Geräte funktionieren. Später habe ich zu Hause ab und zu versucht zu programmieren, was mir ebenfalls Spass gemacht hat. Beim Schnuppern hat sich dann herausgestellt, dass ich Informatiker werden will. Meine Ziele sind es, ein sehr gutes Verständnis für das Programmieren aufzubauen, möglichst viele Programmiersprachen zu beherrschen und die Swisscom in eine digitale Zukunft zu führen."
-            .split(" ")
-            .map((word, wordIndex) => (
-              <span
-                key={wordIndex}
-                className="word" // <- Äußerer Wrapper für jedes Wort
-                style={{ display: "inline-block", marginRight: "10px" }}
-              >
-                {word.split("").map((char, charIndex) => (
+        <div className={styles.aboutMeInfoContainer}>
+          <div>
+            <h1 className={styles.gradientText}>Über Mich</h1>
+
+            <p className={styles.secondaryText} ref={textRef}>
+              {"Ich habe mich bereits als kleines Kind gewundert, wie verschiedene Applikationen und technische Geräte funktionieren. Später habe ich zu Hause ab und zu versucht zu programmieren, was mir ebenfalls Spass gemacht hat. Beim Schnuppern hat sich dann herausgestellt, dass ich Informatiker werden will. Meine Ziele sind es, ein sehr gutes Verständnis für das Programmieren aufzubauen, möglichst viele Programmiersprachen zu beherrschen und die Swisscom in eine digitale Zukunft zu führen."
+                .split(" ")
+                .map((word, wordIndex) => (
                   <span
-                    key={charIndex}
-                    className="letter" // <- Innerer Wrapper für jedes Zeichen
-                    style={{ display: "inline-block" }}
+                    key={wordIndex}
+                    className="word" // <- Äußerer Wrapper für jedes Wort
+                    style={{ display: "inline-block", marginRight: "10px" }}
                   >
-                    {char}
+                    {word.split("").map((char, charIndex) => (
+                      <span
+                        key={charIndex}
+                        className="letter" // <- Innerer Wrapper für jedes Zeichen
+                        style={{ display: "inline-block" }}
+                      >
+                        {char}
+                      </span>
+                    ))}
                   </span>
                 ))}
-              </span>
-            ))}
-        </p>
+            </p>
+          </div>
+          <div className={styles.portraitContainer}>
+            <img src={portraitImage} alt="" />
+          </div>
+        </div>
       </div>
     </>
   );

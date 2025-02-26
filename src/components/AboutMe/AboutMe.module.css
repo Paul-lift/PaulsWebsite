@@ -26,3 +26,18 @@
     -webkit-text-fill-color: transparent;
 }
 
+.aboutMeInfoContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.aboutMeInfoContainer img{
+    width: auto;
+    height: 60vh;
+    z-index: 2;
+    border-radius: 10px;
+}
+

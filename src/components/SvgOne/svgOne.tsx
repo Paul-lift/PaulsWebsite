@@ -10,6 +10,26 @@ function SvgOne() {
   const pathRef = useRef<SVGPathElement | null>(null);
   const ballRef = useRef<SVGCircleElement | null>(null);
 
+    const SvgRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      SvgRef.current,
+      { opacity: 0, y: -40 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: SvgRef.current,
+          start: "top 10%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  }, []);
+
   useEffect(() => {
     if (!pathRef.current || !ballRef.current) {
       console.log("pathRef oder ballRef ist null! ❌");
@@ -46,6 +66,7 @@ function SvgOne() {
         viewBox="0 0 800 400"
         className={styles.svg}
         preserveAspectRatio="none"
+        ref={SvgRef}
       >
         <path
           ref={pathRef}
