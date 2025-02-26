@@ -10,7 +10,7 @@ function SvgOne() {
   const pathRef = useRef<SVGPathElement | null>(null);
   const ballRef = useRef<SVGCircleElement | null>(null);
 
-    const SvgRef = useRef(null);
+  const SvgRef = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(
@@ -36,8 +36,6 @@ function SvgOne() {
       return;
     }
 
-    console.log("GSAP startet ✅");
-
     const animation = gsap.to(ballRef.current, {
       motionPath: {
         path: "#motionPath",
@@ -45,9 +43,11 @@ function SvgOne() {
         alignOrigin: [0.5, 0.5],
         autoRotate: false,
       },
-      duration: 5, // Dauer der Animation
+      duration: 7,
       ease: "power1.inOut",
-      paused: true, // Startet erst bei ScrollTrigger
+      repeat: -1,
+      repeatDelay: 0,
+      paused: true,
     });
 
     ScrollTrigger.create({
@@ -59,26 +59,42 @@ function SvgOne() {
   }, []);
 
   return (
-    <div>
-      <svg
-        width="100%"
-        height="100%"
-        viewBox="0 0 800 400"
-        className={styles.svg}
-        preserveAspectRatio="none"
-        ref={SvgRef}
-      >
-        <path
-          ref={pathRef}
-          id="motionPath"
-          d="M 0 0 Q 400 0, 675 150 T 1250 200"
-          fill="none"
-          stroke="white"
-          strokeWidth="4"
-        />
-        <circle ref={ballRef} id="ball" cx="0" cy="0" r="7" fill=" rgba(199, 26, 226, 1)"  style={{ filter: "drop-shadow(0px 0px 10px rgba(199, 26, 226, 1))" }}/>
-      </svg>
-    </div>
+    <>
+      <div>
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 800 400"
+          className={styles.svg}
+          preserveAspectRatio="none"
+          ref={SvgRef}
+        >
+          <path
+            ref={pathRef}
+            id="motionPath"
+            d="M -50 50 H 50 V 375 H 400 V 340 H 850"
+            fill="none"
+            stroke="white"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+
+          <circle
+            ref={ballRef}
+            id="ball"
+            cx="0"
+            cy="0"
+            r="5"
+            fill=" rgba(199, 26, 226, 1)"
+            style={{
+              filter: "drop-shadow(0px 0px 10px rgba(199, 26, 226, 1))",
+            }}
+          />
+        </svg>
+      </div>
+      
+    </>
   );
 }
 

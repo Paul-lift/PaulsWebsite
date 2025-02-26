@@ -34,10 +34,11 @@
 }
 
 
-.aboutMeInfoContainer img{
+.aboutMeInfoContainer img {
     width: auto;
     height: 60vh;
     z-index: 2;
     border-radius: 10px;
+    box-shadow: 0px 0px 200px #a05cc780;
 }
 

@@ -6,7 +6,7 @@ import portraitImage from "../../assets/Portrait_Paul_Bot.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function AboutMe() {
+function AboutMe(props: any) {
   const aboutMeRef = useRef(null);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ function AboutMe() {
     const words = textRef.current!.querySelectorAll(".word");
     const letters = textRef.current!.querySelectorAll(".letter");
 
-    words.forEach((letter: any) => {
+    words .forEach((letter: any) => {
       gsap.set(letter, { display: "inline-block" });
 
       letter.addEventListener("mouseenter", () => {
@@ -69,6 +69,7 @@ function AboutMe() {
 
   return (
     <>
+      <div ref={props.refProp} className={styles.scrollContainer}></div>
       <div className={styles.aboutMe} ref={aboutMeRef}>
         <div className={styles.aboutMeInfoContainer}>
           <div>
@@ -97,7 +98,7 @@ function AboutMe() {
             </p>
           </div>
           <div className={styles.portraitContainer}>
-            <img src={portraitImage} alt="" />
+            <img src={portraitImage} alt="" draggable="false" />
           </div>
         </div>
       </div>
