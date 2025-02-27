@@ -2,13 +2,14 @@ import styles from "./SvgOne.module.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function SvgOne() {
   gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
   const pathRef = useRef<SVGPathElement | null>(null);
   const ballRef = useRef<SVGCircleElement | null>(null);
+  let [isVisible, setIsVisible] = useState(false)
 
   const SvgRef = useRef(null);
 
@@ -25,9 +26,12 @@ function SvgOne() {
           trigger: SvgRef.current,
           start: "top 10%",
           toggleActions: "play none none none",
+          onEnter: () => setIsVisible(true)
         },
       }
     );
+
+    
   }, []);
 
   useEffect(() => {
@@ -47,16 +51,16 @@ function SvgOne() {
       ease: "power1.inOut",
       repeat: -1,
       repeatDelay: 0,
-      paused: true,
+      paused: false,
     });
 
     ScrollTrigger.create({
       trigger: pathRef.current,
-      start: "top 50%", // Startet, wenn der Pfad zu 70% im Viewport ist
+      start: "top 0%", // Startet, wenn der Pfad zu 70% im Viewport ist
       onEnter: () => animation.play(),
-      once: true, // Nur einmal abspielen
+      once: false, // Nur einmal abspielen
     });
-  }, []);
+  }, [isVisible]);
 
   return (
     <>
@@ -74,7 +78,7 @@ function SvgOne() {
             id="motionPath"
             d="M -50 50 H 50 V 375 H 400 V 340 H 850"
             fill="none"
-            stroke="white"
+            stroke="#6ea8cd"
             strokeWidth="3"
             strokeLinecap="round"
             strokeLinejoin="round"

@@ -1,0 +1,15 @@
+.svg {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0 ; /* Stelle sicher, dass es über anderen Elementen liegt */
+    pointer-events: none; /* Verhindert Klickblockaden */
+    filter: drop-shadow(0px 0px 200px #a05cc780);
+  }
+
+
+.svgWrapper{
+  width: 100%;
+}
+  

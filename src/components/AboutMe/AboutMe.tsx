@@ -3,6 +3,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import portraitImage from "../../assets/Portrait_Paul_Bot.png";
+import SvgOne from "../../Svgs/SvgOne/svgOne.tsx";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
