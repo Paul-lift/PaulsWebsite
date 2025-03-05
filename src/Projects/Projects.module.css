@@ -20,7 +20,7 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
-.projectsContainer{
+.projectsContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -37,9 +37,13 @@ p {
     max-width: 39vw;
 }
 
-@media (max-width: 500px){
-    .projectContainer{
+@media (max-width: 500px) {
+
+    .projectsContainer {}
+
+    .projectContainer {
         flex-basis: 100%;
         max-width: 100%;
+        text-align: center;
     }
 }
