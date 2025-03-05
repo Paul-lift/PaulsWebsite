@@ -3,6 +3,11 @@ import styles from "./Header.module.css";
 
 
 function Header(props: any) {
+
+
+
+
+  
   return (
     <>
       <nav>
@@ -12,9 +17,9 @@ function Header(props: any) {
           </div>
           <div className={styles.linkWrapper}>
             <a href="#" onClick={props.scrollToAboutMe }>Über mich </a>
-            <a href="#">Projekte </a>
-            <a href="#">Fähigkeiten </a>
-            <a href="#">Kontakt </a>
+            <a href="#" onClick={props.scrollToProjects }>Projekte </a>
+            <a href="#" onClick={props.scrollToAboutMe }>Fähigkeiten </a>
+            <a href="#" onClick={props.scrollToAboutMe }>Kontakt </a>
           </div>
         </div>
       </nav>

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./StartPage.module.css";
 import gsap from "gsap";
 
@@ -9,11 +9,14 @@ function StartPage() {
     "Ich bin im ersten Lehrjahr",
   ];
 
+  let [isVisible, setisVisible] = useState(false)
+
   const currentText = useRef(0);
   const currentChar = useRef(0);
 
   useEffect(() => {
     const textElement = document.querySelector(`.${styles.startPageText} span`);
+    if (!isVisible) return; // Warte bis die Animation durch ist
 
     if (!textElement) return;
 
@@ -45,7 +48,7 @@ function StartPage() {
     }
 
     typeWriter();
-  }, []);
+  }, [isVisible]);
 
   let startPageText = useRef(null);
 
@@ -53,8 +56,8 @@ function StartPage() {
     gsap.fromTo(
       startPageText.current,
       { opacity: 0, y: -40 },
-      { opacity: 1, y: 0, duration: 1, yoyo: true, repeat: 0 }
-    );
+      { opacity: 1, y: 0, duration: 0.6, yoyo: true, repeat: 0,onComplete: ()=> setisVisible(true) }
+    )
   }, []);
 
   return (

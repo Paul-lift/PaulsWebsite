@@ -1,0 +1,45 @@
+.projectsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    --mainText: #f8f8ff;
+    --secondaryText: #E0E0E0;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+p {
+    color: var(--mainText);
+}
+
+.gradientText {
+    font-weight: bold;
+    background: linear-gradient(180deg, #fff, #414141);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.projectsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.projectContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 0 1 39vw;
+    max-width: 39vw;
+}
+
+@media (max-width: 500px){
+    .projectContainer{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}

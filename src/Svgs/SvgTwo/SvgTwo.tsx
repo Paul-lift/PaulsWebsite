@@ -73,7 +73,7 @@ function SvgTwo() {
         <path
           id="motionPathTwo"
           ref={pathRef}
-          d="M 1300 40 H 400 V 100 H 650 V 175 V 340 H 800"
+          d="M 1300 40 H 400 V 100 H 650 V 175 V 340 H 900"
           fill="none"
           stroke="#a05cc7"
           strokeWidth="3"

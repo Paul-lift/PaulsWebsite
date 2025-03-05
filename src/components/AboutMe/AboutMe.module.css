@@ -1,8 +1,8 @@
-.aboutMe{
+.aboutMe {
     height: 100vh;
     display: flex;
-    margin-left: 10vw   ;
-    margin-right: 10vw  ;
+    margin-left: 10vw;
+    margin-right: 10vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -19,14 +19,14 @@
     color: #E0E0E0;
 }
 
-.gradientText{
+.gradientText {
     font-weight: bold;
     background: linear-gradient(180deg, #fff, #414141);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.aboutMeInfoContainer{
+.aboutMeInfoContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -41,5 +41,3 @@
     border-radius: 10px;
     box-shadow: 0px 0px 200px #a05cc780;
 }
-
-    
