@@ -42,7 +42,7 @@
     box-shadow: 0px 0px 200px #a05cc780;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
 
     .aboutMeInfoContainer{
         flex-wrap: wrap;

@@ -39,8 +39,6 @@ p {
 
 @media (max-width: 500px) {
 
-    .projectsContainer {}
-
     .projectContainer {
         flex-basis: 100%;
         max-width: 100%;

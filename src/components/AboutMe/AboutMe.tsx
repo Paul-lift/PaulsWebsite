@@ -80,16 +80,14 @@ function AboutMe(props: any) {
             <p className={styles.secondaryText} ref={textRef}>
               {"Ich habe mich bereits als kleines Kind gewundert, wie verschiedene Applikationen und technische Geräte funktionieren. Später habe ich zu Hause ab und zu versucht zu programmieren, was mir ebenfalls Spass gemacht hat. Beim Schnuppern hat sich dann herausgestellt, dass ich Informatiker werden will. Meine Ziele sind es, ein sehr gutes Verständnis für das Programmieren aufzubauen, möglichst viele Programmiersprachen zu beherrschen und die Swisscom in eine digitale Zukunft zu führen."
                 .split(" ")
-                .map((word, wordIndex) => (
+                .map((word) => (
                   <span
-                    key={wordIndex}
-                    className="word" // <- Äußerer Wrapper für jedes Wort
+                    className="word" 
                     style={{ display: "inline-block", marginRight: "10px" }}
                   >
-                    {word.split("").map((char, charIndex) => (
+                    {word.split("").map((char) => (
                       <span
-                        key={charIndex}
-                        className="letter" // <- Innerer Wrapper für jedes Zeichen
+                        className="letter" 
                         style={{ display: "inline-block" }}
                       >
                         {char}
