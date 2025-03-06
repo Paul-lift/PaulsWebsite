@@ -7,6 +7,7 @@
     --secondaryText: #E0E0E0;
     margin-left: 10vw;
     margin-right: 10vw;
+    
 }
 
 p {
@@ -38,6 +39,10 @@ p {
 }
 
 @media (max-width: 500px) {
+
+    .projectsWrapper{
+        margin-top: 5vh;
+    }
 
     .projectContainer {
         flex-basis: 100%;
