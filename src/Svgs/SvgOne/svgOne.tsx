@@ -36,7 +36,6 @@ function SvgOne() {
 
   useEffect(() => {
     if (!pathRef.current || !ballRef.current) {
-      console.log("pathRef oder ballRef ist null! ❌");
       return;
     }
 
@@ -56,9 +55,9 @@ function SvgOne() {
 
     ScrollTrigger.create({
       trigger: pathRef.current,
-      start: "top 0%", // Startet, wenn der Pfad zu 70% im Viewport ist
+      start: "top 0%", 
       onEnter: () => animation.play(),
-      once: false, // Nur einmal abspielen
+      once: false, 
     });
   }, [isVisible]);
 
@@ -76,7 +75,7 @@ function SvgOne() {
           <path
             ref={pathRef}
             id="motionPath"
-            d="M -50 50 H 50 V 375 H 400 V 340 H 850"
+            d="M -50 50 H 50 V 375 H 400 V 320 H 850"
             fill="none"
             stroke="#6ea8cd"
             strokeWidth="3"

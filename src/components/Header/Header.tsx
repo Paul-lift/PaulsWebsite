@@ -18,7 +18,7 @@ function Header(props: any) {
           <div className={styles.linkWrapper}>
             <a href="#" onClick={props.scrollToAboutMe }>Über mich </a>
             <a href="#" onClick={props.scrollToProjects }>Projekte </a>
-            <a href="#" onClick={props.scrollToAboutMe }>Fähigkeiten </a>
+            <a href="#" onClick={props.scrollToSkillsAndLanguages }>Fähigkeiten </a>
             <a href="#" onClick={props.scrollToAboutMe }>Kontakt </a>
           </div>
         </div>

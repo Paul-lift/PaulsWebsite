@@ -35,7 +35,7 @@ function AboutMe(props: any) {
     const words = textRef.current!.querySelectorAll(".word");
     const letters = textRef.current!.querySelectorAll(".letter");
 
-    words .forEach((letter: any) => {
+    words.forEach((letter: any) => {
       gsap.set(letter, { display: "inline-block" });
 
       letter.addEventListener("mouseenter", () => {

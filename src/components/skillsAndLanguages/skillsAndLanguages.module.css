@@ -1,0 +1,117 @@
+.skillsAndLanguagesWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    --mainText: #f8f8ff;
+    --secondaryText: #E0E0E0;
+    --HTMLcolor: #e75226;
+    --CSScolor: #264de4;
+    --JScolor: #f8dc4c;
+    --JavaColor: #4e7896;
+    --ReactColor: #61dafb;
+    --AngularColor: #e01b9f;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    height: 100vh;
+}
+
+.header {
+    font-size: 3em;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+.gradientText {
+    font-weight: 500;
+    background: linear-gradient(180deg, #fff, #414141);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.skillsContainerWrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skillsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 400px;
+    max-width: 400px; 
+    background-color: rgb(29, 28, 28);
+    border-radius: 10px;
+    padding: 15px;
+    filter: drop-shadow(0px 0px 10px #3f364480);
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #303030;
+
+    img {
+        margin: 30px;
+    }
+}
+
+
+
+.skillsContainer:hover {
+    transform: scale(1.03);
+    
+}
+
+.HTMLcontainer img {
+    filter: drop-shadow(0px 0px 20px var(--HTMLcolor))
+}
+
+.CSScontainer img {
+    filter: drop-shadow(0px 0px 20px var(--CSScolor));
+}
+
+.JScontainer img {
+    filter: drop-shadow(0px 0px 20px var(--JScolor));
+}
+
+.javaContainer img {
+    filter: drop-shadow(0px 0px 20px var(--JavaColor));
+}
+
+.reactContainer img {
+    filter: drop-shadow(0px 0px 20px var(--ReactColor));
+}
+
+.angularContainer img {
+    filter: drop-shadow(0px 0px 20px var(--AngularColor));
+}
+
+
+
+.icon {
+    height: auto;
+    width: 10vw;
+}
+
+.languagesWrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.languagesContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex: 0 1 auto;
+    width: auto;
+    background-color: rgb(37, 36, 36);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #303030;
+    filter: drop-shadow(0px 0px 10px #2c173880);
+}

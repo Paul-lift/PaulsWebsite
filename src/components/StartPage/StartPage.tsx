@@ -4,9 +4,9 @@ import gsap from "gsap";
 
 function StartPage() {
   const texts = [
-    "Ich bin Paul",
-    "Ich bin Informatiker",
-    "Ich bin im ersten Lehrjahr",
+    "ich bin Paul",
+    "ich bin Informatiker",
+    "ich bin im ersten Lehrjahr",
   ];
 
   let [isVisible, setisVisible] = useState(false)
@@ -56,7 +56,7 @@ function StartPage() {
     gsap.fromTo(
       startPageText.current,
       { opacity: 0, y: -40 },
-      { opacity: 1, y: 0, duration: 0.6, yoyo: true, repeat: 0,onComplete: ()=> setisVisible(true) }
+      { opacity: 1, y: 0, duration: 0.6, repeat: 0,onComplete: ()=> setisVisible(true) }
     )
   }, []);
 

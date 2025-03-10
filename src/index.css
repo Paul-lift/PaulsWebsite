@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 * {
-    font-family: "Inter", sans-serif; /* Korrekte Fallback-Schrift */
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     font-style: normal;
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Verhindert Layout-Probleme mit Padding */
+    box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
+    overflow-y: auto;
     width: 100vw;
     min-height: 100vh;
     background-color: #0f0f0f;
+    overflow: inherit;
 }
