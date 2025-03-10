@@ -1,6 +1,14 @@
 import styles from "./skillsAndLanguages.module.css";
 
-function skillsAndLanguages(props: any) {
+// Import der Icons
+import HTMLIcon from "../../assets/icons/HTML_icon.png";
+import CSSIcon from "../../assets/icons/CSS_icon.png";
+import JSIcon from "../../assets/icons/JS_icon.png";
+import JavaIcon from "../../assets/icons/Java_icon.png";
+import ReactIcon from "../../assets/icons/React_icon.png";
+import AngularIcon from "../../assets/icons/Angular_icon.png";
+
+function SkillsAndLanguages(props: any) {
   return (
     <>
       <div ref={props.refProp}></div>
@@ -9,71 +17,37 @@ function skillsAndLanguages(props: any) {
           Coding Skills
         </h1>
         <div className={[styles.skillsContainerWrapper].join(" ")}>
-          <div
-            className={[styles.skillsContainer, styles.HTMLcontainer].join(" ")}
-          >
-            <img
-              src="src\assets\icons\HTML_icon.png"
-              alt="HTML Icon"
-              className={[styles.icon].join(" ")}
-            />
+
+          <div className={[styles.skillsContainer, styles.HTMLcontainer].join(" ")}>
+            <img src={HTMLIcon} alt="HTML Icon" className={[styles.icon].join(" ")} />
             <p>HTML - Erweiterte Grundkenntnisse</p>
           </div>
-          <div
-            className={[styles.skillsContainer, styles.CSScontainer].join(" ")}
-          >
-            <img
-              src="src\assets\icons\CSS_icon.png"
-              alt="CSS Icon"
-              className={[styles.icon].join(" ")}
-            />
 
+          <div className={[styles.skillsContainer, styles.CSScontainer].join(" ")}>
+            <img src={CSSIcon} alt="CSS Icon" className={[styles.icon].join(" ")} />
             <p>CSS - Erweiterte Grundkenntnisse</p>
           </div>
-          <div
-            className={[styles.skillsContainer, styles.JScontainer].join(" ")}
-          >
-            <img
-              src="src\assets\icons\JS_icon.png"
-              alt="CSS Icon"
-              className={[styles.icon].join(" ")}
-            />
+
+          <div className={[styles.skillsContainer, styles.JScontainer].join(" ")}>
+            <img src={JSIcon} alt="JavaScript Icon" className={[styles.icon].join(" ")} />
             <p>JavaScript - Erweiterte Grundkenntnisse</p>
           </div>
-          <div
-            className={[styles.skillsContainer, styles.javaContainer].join(" ")}
-          >
-            <img
-              src="src\assets\icons\Java_icon.png"
-              alt="CSS Icon"
-              className={[styles.icon].join(" ")}
-            />
+
+          <div className={[styles.skillsContainer, styles.javaContainer].join(" ")}>
+            <img src={JavaIcon} alt="Java Icon" className={[styles.icon].join(" ")} />
             <p>Java - Grundkenntnisse</p>
           </div>
-          <div
-            className={[styles.skillsContainer, styles.reactContainer].join(
-              " "
-            )}
-          >
-            <img
-              src="src\assets\icons\React_icon.png"
-              alt="CSS Icon"
-              className={[styles.icon].join(" ")}
-            />
+
+          <div className={[styles.skillsContainer, styles.reactContainer].join(" ")}>
+            <img src={ReactIcon} alt="React Icon" className={[styles.icon].join(" ")} />
             <p>React - Grundkenntnisse</p>
           </div>
-          <div
-            className={[styles.skillsContainer, styles.angularContainer].join(
-              " "
-            )}
-          >
-            <img
-              src="src\assets\icons\Angular_icon.png"
-              alt="CSS Icon"
-              className={[styles.icon].join(" ")}
-            />
+
+          <div className={[styles.skillsContainer, styles.angularContainer].join(" ")}>
+            <img src={AngularIcon} alt="Angular Icon" className={[styles.icon].join(" ")} />
             <p>Angular - Grundkenntnisse</p>
           </div>
+          
         </div>
 
         <h1 className={[styles.header, styles.gradientText].join(" ")}>
@@ -99,4 +73,5 @@ function skillsAndLanguages(props: any) {
     </>
   );
 }
-export default skillsAndLanguages;
+
+export default SkillsAndLanguages;
