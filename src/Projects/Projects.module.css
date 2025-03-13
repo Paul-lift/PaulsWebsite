@@ -53,8 +53,8 @@ p {
     background-color: rgb(37, 36, 36);
     border-radius: 10px;
     padding: 20px;
-    filter: drop-shadow(0px 0px 10px #3f364480);
-    border: 1px solid rgb(53, 53, 53);
+    filter: drop-shadow(0px 0px 10px #00000080);
+    border: 1px solid #000000;
 }
 
 @media (max-width: 1250px) {

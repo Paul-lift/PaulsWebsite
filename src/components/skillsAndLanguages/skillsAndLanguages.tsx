@@ -7,8 +7,52 @@ import JSIcon from "../../assets/icons/JS_icon.png";
 import JavaIcon from "../../assets/icons/Java_icon.png";
 import ReactIcon from "../../assets/icons/React_icon.png";
 import AngularIcon from "../../assets/icons/Angular_icon.png";
+import { useEffect,useRef } from "react";
+import gsap from "gsap";
+
 
 function SkillsAndLanguages(props: any) {
+
+  const skillsRef = useRef(null) //SkillsContainer reference
+  const languagesRef = useRef(null) //languages reference
+
+  //Blend in effekt for Skills
+  useEffect(() => {
+    gsap.fromTo(
+      skillsRef.current,
+      { opacity: 0, y: -40 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: skillsRef.current,
+          start: "top 60%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  }, []);
+
+    //Blend in effekt for languages
+    useEffect(() => {
+      gsap.fromTo(
+        languagesRef.current,
+        { opacity: 0, y: -40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: languagesRef.current,
+            start: "top 60%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }, []);
   return (
     <>
       <div ref={props.refProp}></div>
@@ -16,7 +60,7 @@ function SkillsAndLanguages(props: any) {
         <h1 className={[styles.header, styles.gradientText].join(" ")}>
           Coding Skills
         </h1>
-        <div className={[styles.skillsContainerWrapper].join(" ")}>
+        <div ref={skillsRef} className={[styles.skillsContainerWrapper].join(" ")}>
 
           <div className={[styles.skillsContainer, styles.HTMLcontainer].join(" ")}>
             <img src={HTMLIcon} alt="HTML Icon" className={[styles.icon].join(" ")} />
@@ -51,14 +95,10 @@ function SkillsAndLanguages(props: any) {
         </div>
 
         <h1 className={[styles.header, styles.gradientText].join(" ")}>
-          Meine Werte & Stärken
-        </h1>
-
-        <h1 className={[styles.header, styles.gradientText].join(" ")}>
           Sprachen
         </h1>
 
-        <div className={[styles.languagesWrapper].join(" ")}>
+        <div ref={languagesRef} className={[styles.languagesWrapper].join(" ")}>
           <div className={[styles.languagesContainer].join(" ")}>
             <p>Deutsch - Muttersprache</p>
           </div>
