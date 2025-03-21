@@ -6,6 +6,7 @@ import SvgOne from "./Svgs/SvgOne/svgOne.tsx";
 import SvgTwo from "./Svgs/SvgTwo/SvgTwo.tsx";
 import Projects from "./Projects/Projects.tsx";
 import SkillsAndLanguages from "./components/skillsAndLanguages/skillsAndLanguages.tsx";
+import Footer from "./components/Footer/Footer.tsx";
 import Calculator from "./components/Calculator/Calculator.tsx";
 
 function App() {
@@ -38,6 +39,8 @@ function App() {
       <AboutMe refProp={aboutMeRef} />
       <Projects refProp={projectsRef} />
       <SkillsAndLanguages refProp={skillsAndLanguagesRef} />
+
+      <Footer/>
     </>
   );
 }
