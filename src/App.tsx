@@ -35,12 +35,11 @@ function App() {
       />
       <StartPage />
       <SvgTwo />
-      <SvgOne />
+      <SvgOne /> 
       <AboutMe refProp={aboutMeRef} />
       <Projects refProp={projectsRef} />
       <SkillsAndLanguages refProp={skillsAndLanguagesRef} />
-
-      <Footer/>
+      <Footer />
     </>
   );
 }
