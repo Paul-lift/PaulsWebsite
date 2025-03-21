@@ -46,7 +46,7 @@ function Footer() {
             <p>Margherita Fasanella - Projektanbieterin</p>
           </a>
         </div>
-        <div className={[styles.contact, styles.footerInfoContainer].join(" ")}>
+        <div className={[styles.contact, styles.footerInfoContainer].join(" ")} id="contact">
           <h3>Kontakt</h3>
           <a
             href="https://intranet.swisscom.com/home/profile/i:0e.t%7Cazuread%7Ctaabopaq"

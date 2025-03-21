@@ -14,28 +14,13 @@ function App() {
   const projectsRef = useRef<HTMLDivElement | null>(null);
   const skillsAndLanguagesRef = useRef<HTMLDivElement | null>(null);
 
-  const scrollToAboutMe = () => {
-    aboutMeRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToProjects = () => {
-    projectsRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToSkillsAndLanguages = () => {
-    projectsRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <>
-      <Header
-        scrollToAboutMe={scrollToAboutMe}
-        scrollToProjects={scrollToProjects}
-        scrollToSkillsAndLanguages={scrollToSkillsAndLanguages}
-      />
+      <Header />
       <StartPage />
       <SvgTwo />
-      <SvgOne /> 
+      <SvgOne />
       <AboutMe refProp={aboutMeRef} />
       <Projects refProp={projectsRef} />
       <SkillsAndLanguages refProp={skillsAndLanguagesRef} />

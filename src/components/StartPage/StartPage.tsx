@@ -62,6 +62,7 @@ function StartPage() {
 
   return (
     <>
+    <div id="top"></div>
       <div className={styles.startPageText} ref={startPageText}>
         <h1 className={styles.startPageTitle}>
           Hallo, <span></span>|

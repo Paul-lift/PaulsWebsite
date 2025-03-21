@@ -1,25 +1,29 @@
 import styles from "./Header.module.css";
+import { Link } from "react-scroll";
 
-
-
-function Header(props: any) {
-
-
-
-
-  
+function Header() {
   return (
     <>
       <nav>
         <div className={styles.navWrapper}>
           <div className={styles.linkWrapper}>
-            <a href="#" id="navTitle">Paul Bot</a>
+            <Link to="top" smooth={true} duration={500}>
+              Paul Bot
+            </Link>
           </div>
           <div className={styles.linkWrapper}>
-            <a href="#" onClick={props.scrollToAboutMe }>Über mich </a>
-            <a href="#" onClick={props.scrollToProjects }>Projekte </a>
-            <a href="#" onClick={props.scrollToSkillsAndLanguages }>Fähigkeiten </a>
-            <a href="#" onClick={props.scrollToAboutMe }>Kontakt </a>
+            <Link to="aboutMe" smooth={true} duration={500}>
+              Über mich
+            </Link>
+            <Link to="projects" smooth={true} duration={500}>
+              Projekte
+            </Link>
+            <Link to="skillsAndLanguages" smooth={true} duration={500}>
+              Fähigkeiten
+            </Link>
+            <Link to="contact" smooth={true} duration={500}>
+              Kontakt
+            </Link>
           </div>
         </div>
       </nav>

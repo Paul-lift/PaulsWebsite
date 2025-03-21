@@ -71,7 +71,7 @@ function AboutMe(props: any) {
 
   return (
     <>
-      <div ref={props.refProp} className={styles.scrollContainer}></div>
+      <div ref={props.refProp} className={styles.scrollContainer} id="aboutMe"></div>
       <div className={styles.aboutMe} ref={aboutMeRef}>
         <div className={styles.aboutMeInfoContainer}>
           <div>
@@ -102,6 +102,7 @@ function AboutMe(props: any) {
           </div>
         </div>
       </div>
+      
     </>
   );
 }

@@ -74,7 +74,7 @@ function SkillsAndLanguages(props: any) {
   }, []);
   return (
     <>
-      <div ref={props.refProp}></div>
+    <div id="skillsAndLanguages"></div>
       <div className={[styles.skillsAndLanguagesWrapper].join(" ")}>
         <h1 className={[styles.header, styles.gradientText].join(" ")}>
           Coding Skills

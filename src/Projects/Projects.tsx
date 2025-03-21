@@ -26,8 +26,7 @@ function Projects(props: any) {
     }, []);
   return (
     <>
-      <div ref={props.refProp}></div>
-      <div ref={projectsRef} className={[styles.projectsWrapper].join(" ")}>
+      <div ref={projectsRef} className={[styles.projectsWrapper].join(" ")} id="projects">
         <h1 className={[styles.gradientText, styles.header].join(" ")}>
           Projekte
         </h1>
@@ -60,6 +59,7 @@ function Projects(props: any) {
           </div>
         </section>
       </div>
+      
     </>
   );
 }
