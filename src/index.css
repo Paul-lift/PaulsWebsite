@@ -14,7 +14,10 @@ html,
 body {
     overflow-x: hidden;
     width: 100vw;
-    min-height: 100vh;
+    min-height: 100dvh;
     background-color: #0f0f0f;
-    overflow: inherit;
+}
+
+#root{
+    overflow-x: hidden;
 }
