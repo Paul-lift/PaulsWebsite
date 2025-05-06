@@ -124,7 +124,7 @@ function SkillsAndLanguages(props: any) {
               alt="Java Icon"
               className={[styles.icon].join(" ")}
             />
-            <p>Java - Grundkenntnisse</p>
+            <p>Java - Erweiterte Grundkenntnisse</p>
           </div>
 
           <div
