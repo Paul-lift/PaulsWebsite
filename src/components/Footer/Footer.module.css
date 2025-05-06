@@ -6,8 +6,9 @@
     margin-bottom: 10vh;
     height: auto;
     pointer-events: none;
-    margin-top: 70vh;
+    margin-top: 80vh;
     pointer-events: all;
+    align-self: flex-end;
 }
 
 .footerInfoContainer {
@@ -46,4 +47,28 @@ h3 {
     color: #f8f8ff;
     font-size: 1.125em;
     margin-top: 1vw;
+}
+
+@media (max-width: 1200px) {
+
+    .footerWrapper {
+        margin-top: 110vh;
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    .footerWrapper {
+        margin-top: 150vh;
+    }
+
+}
+
+@media (max-width: 500) {
+
+    .footerWrapper {
+        margin-top: 50vh;
+    }
+
 }
