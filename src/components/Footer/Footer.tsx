@@ -36,7 +36,14 @@ function Footer() {
             target="_blank"
             className={[styles.referencePerson].join(" ")}
           >
-            <p>Jonas Schweizer - Lernbegleiter</p>
+            <p>Eva Dietze - Lernbegleiter</p>
+          </a>
+          <a
+            href="https://intranet.swisscom.com/home/profile/i:0e.t%7Cazuread%7Ctgdscjof"
+            target="_blank"
+            className={[styles.referencePerson].join(" ")}
+          >
+            <p>Jonas Schweizer - Ehemaliger Lernbegleiter</p>
           </a>
           <a
             href="https://intranet.swisscom.com/home/profile/i:0e.t%7Cazuread%7Ctzhfama3"
@@ -46,7 +53,10 @@ function Footer() {
             <p>Margherita Fasanella - Projektanbieterin</p>
           </a>
         </div>
-        <div className={[styles.contact, styles.footerInfoContainer].join(" ")} id="contact">
+        <div
+          className={[styles.contact, styles.footerInfoContainer].join(" ")}
+          id="contact"
+        >
           <h3>Kontakt</h3>
           <a
             href="https://intranet.swisscom.com/home/profile/i:0e.t%7Cazuread%7Ctaabopaq"
