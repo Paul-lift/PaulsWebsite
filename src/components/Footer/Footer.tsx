@@ -32,7 +32,7 @@ function Footer() {
         >
           <h3>Referenzen</h3>
           <a
-            href="https://intranet.swisscom.com/home/profile/i:0e.t%7Cazuread%7Ctgdscjof"
+            href="https://intranet.swisscom.com/home/profile/i:0e.t%7Cazuread%7Ctzhdiev1"
             target="_blank"
             className={[styles.referencePerson].join(" ")}
           >
